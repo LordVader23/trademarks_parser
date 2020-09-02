@@ -1,6 +1,9 @@
 from selenium import webdriver
 from time import sleep
 from PIL import Image
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.by import By
 
 
 class Bot:
@@ -24,6 +27,10 @@ class Bot:
         self.get_trademarks()
 
     def get_trademarks(self):
+        # Wait before element is clickable
+        wait2 = WebDriverWait(self.driver, 10)
+        wait2.until(EC.staleness_of(self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")[0]))
+
         all_info = self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")
         info = []
 
@@ -49,7 +56,15 @@ class Bot:
             del info[0:9]
             del img_links[0]
 
-        print(data)
+        try:
+            next_page_button = self.driver.find_element_by_css_selector("b.dxp-button.dxp-bi.dxp-disabledButton")
+        except Exception:
+            return None
+        else:
+            next_page_button = self.driver.find_element_by_css_selector("img.dxWeb_pNext_Material")
+            next_page_button.click()
+
+        return self.get_trademarks()
 
     def write_csv(self, data):
         data_row = [
