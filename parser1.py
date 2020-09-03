@@ -4,6 +4,7 @@ from PIL import Image
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import TimeoutException
 
 
 class Bot:
@@ -29,7 +30,16 @@ class Bot:
     def get_trademarks(self):
         # Wait before element is clickable
         wait2 = WebDriverWait(self.driver, 10)
-        wait2.until(EC.staleness_of(self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")[0]))
+
+        # try:
+        #     wait2.until(EC.staleness_of(self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")[0]))
+        # except TimeoutException:
+        #     self.get_trademarks()
+
+        wait2.until(EC.element_to_be_clickable((By.CSS_SELECTOR,
+                                                "td.dxflNestedControlCell_Material")))
+        wait2.until(
+            EC.staleness_of(self.driver.find_elements_by_css_selector("span[id='cvContracts_DXCardLayout0_0_Cap']")[0]))
 
         all_info = self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")
         info = []
