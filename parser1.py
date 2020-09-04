@@ -5,6 +5,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import StaleElementReferenceException
+from selenium.common.exceptions import ElementClickInterceptedException
 
 
 class Bot:
@@ -27,19 +30,29 @@ class Bot:
 
         self.get_trademarks()
 
+    def wait_more(self):
+        sleep(10)
+
     def get_trademarks(self):
         # Wait before element is clickable
-        wait2 = WebDriverWait(self.driver, 10)
+        wait2 = WebDriverWait(self.driver, 15)
 
         # try:
-        #     wait2.until(EC.staleness_of(self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")[0]))
-        # except TimeoutException:
+        #     ignored_exceptions = (NoSuchElementException, StaleElementReferenceException,)
+        #     all_info = WebDriverWait(self.driver, 10, ignored_exceptions=ignored_exceptions).until(
+        #         EC.presence_of_element_located((By.CSS_SELECTOR, 'td.dxflNestedControlCell_Material')))
+        # except :
         #     self.get_trademarks()
-
-        wait2.until(EC.element_to_be_clickable((By.CSS_SELECTOR,
-                                                "td.dxflNestedControlCell_Material")))
-        wait2.until(
-            EC.staleness_of(self.driver.find_elements_by_css_selector("span[id='cvContracts_DXCardLayout0_0_Cap']")[0]))
+        while True:
+            try:
+                wait2.until(EC.element_to_be_clickable((By.CSS_SELECTOR,
+                                                    "td.dxflNestedControlCell_Material")))
+            except TimeoutException:
+                self.wait_more()
+            else:
+                break
+        # wait2.until(
+        #     EC.staleness_of(self.driver.find_elements_by_css_selector("span[id='cvContracts_DXCardLayout0_0_Cap']")[0]))
 
         all_info = self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")
         info = []
@@ -67,14 +80,15 @@ class Bot:
             del img_links[0]
 
         try:
-            next_page_button = self.driver.find_element_by_css_selector("b.dxp-button.dxp-bi.dxp-disabledButton")
-        except Exception:
-            return None
-        else:
+            # sleep(9)
+            # next_page_button = self.driver.find_element_by_css_selector("b.dxp-button.dxp-bi.dxp-disabledButton")
+            sleep(9)
             next_page_button = self.driver.find_element_by_css_selector("img.dxWeb_pNext_Material")
             next_page_button.click()
+        except Exception:
+            return None
 
-        return self.get_trademarks()
+        self.get_trademarks()
 
     def write_csv(self, data):
         data_row = [
