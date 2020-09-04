@@ -71,6 +71,7 @@ class Bot:
 
         data = []
 
+        # To generate data
         while info:
             a1 = info[0:9]
             a1.append(img_links[0])
@@ -79,6 +80,8 @@ class Bot:
             del info[0:9]
             del img_links[0]
 
+        self.write_csv(data)
+        # To paginate
         try:
             # sleep(9)
             # next_page_button = self.driver.find_element_by_css_selector("b.dxp-button.dxp-bi.dxp-disabledButton")
@@ -91,7 +94,7 @@ class Bot:
         self.get_trademarks()
 
     def write_csv(self, data):
-        with open('coin_market.csv', 'a+', encoding='utf-8') as f:
+        with open('trademarks1.csv', 'a+', encoding='utf-8') as f:
             writer = csv.writer(f)
             writer.writerow(data)
 
