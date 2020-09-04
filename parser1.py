@@ -91,14 +91,9 @@ class Bot:
         self.get_trademarks()
 
     def write_csv(self, data):
-        data_row = [
-            data['title'],
-            data['price'],
-        ]
-
         with open('coin_market.csv', 'a+', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow(data_row)
+            writer.writerow(data)
 
 
 if __name__ == '__main__':
