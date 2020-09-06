@@ -32,10 +32,16 @@ class Bot:
         self.get_trademarks()
 
     def wait_more(self, wait_obj, ec):
+        flag = 1
         while True:
             try:
                 wait_obj.until(ec)
             except TimeoutException:
+                if flag == 12:
+                    break
+                else:
+                    flag += 1
+                    
                 self.wait_more(wait_obj, ec)
             else:
                 break
