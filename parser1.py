@@ -12,12 +12,18 @@ import csv
 
 
 class Bot:
+    FILE_NAME = 'trademarks1.csv'
+
     def __init__(self):
         self.driver = webdriver.Firefox(executable_path="/home/lordvader/Загрузки/geckodriver")
 
     def run(self):
+        wait2 = WebDriverWait(self.driver, 15)
+
         self.driver.get('http://gosreestr.kazpatent.kz/')
 
+        self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
+                                                          "td[id='cbReestrType_B-1']")))
         register = self.driver.find_element_by_css_selector("td[id='cbReestrType_B-1']")
         register.click()
 
@@ -41,7 +47,7 @@ class Bot:
                     break
                 else:
                     flag += 1
-                    
+
                 self.wait_more(wait_obj, ec)
             else:
                 break
@@ -49,61 +55,29 @@ class Bot:
     def get_trademarks(self):
         wait2 = WebDriverWait(self.driver, 15)
 
-        # try:
-        #     ignored_exceptions = (NoSuchElementException, StaleElementReferenceException,)
-        #     all_info = WebDriverWait(self.driver, 10, ignored_exceptions=ignored_exceptions).until(
-        #         EC.presence_of_element_located((By.CSS_SELECTOR, 'td.dxflNestedControlCell_Material')))
-        # except :
-        #     self.get_trademarks()
+        while True:
+            sleep(3)
 
-        # while True:
-        #     try:
-        #         wait2.until(EC.element_to_be_clickable((By.CSS_SELECTOR,
-        #                                             "td.dxflNestedControlCell_Material")))
-        #     except TimeoutException:
-        #         self.wait_more()
-        #     else:
-        #         break
+            try:
+                loader = self.driver.find_element_by_id("cvReestr_LPV")
+            except NoSuchElementException:
+                break
 
-        # To wait
         sleep(10)
-        try:
-            self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
-                                                        "td.dxflNestedControlCell_Material")))
-        except StaleElementReferenceException:
-            self.wait_more(wait2, EC.staleness_of(self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")[0]))
-        # wait2.until(
-        #     EC.staleness_of(self.driver.find_elements_by_css_selector("span[id='cvContracts_DXCardLayout0_0_Cap']")[0]))
 
-        sleep(5)
         all_info = self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")
         info = []
-
-        sleep(10)
-        try:
-            self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
-                                                          "img.dxeImage_Material")))
-        except StaleElementReferenceException:
-            self.wait_more(wait2, EC.staleness_of(self.driver.find_elements_by_css_selector("img.dxeImage_Material")[-1]))
 
         images = self.driver.find_elements_by_css_selector("img.dxeImage_Material")
         img_links = []
 
         # Get img links
-        try:
-            for img in images:
-                link = img.get_attribute('src')
-                img_links.append(link)
-        except StaleElementReferenceException:
-            self.wait_more(wait2, EC.staleness_of(self.driver.find_elements_by_css_selector("img.dxeImage_Material")[-1]))
-
+        for img in images:
+            link = img.get_attribute('src')
+            img_links.append(link)
         # To extract elem text
-        try:
-            for elem in all_info:
-                info.append(elem.text)
-        except StaleElementReferenceException:
-            self.wait_more(wait2,
-                           EC.staleness_of(self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")[-1]))
+        for elem in all_info:
+            info.append(elem.text)
 
         data = []
 
@@ -119,8 +93,6 @@ class Bot:
         self.write_csv(data)
         # To paginate
         try:
-            # sleep(9)
-            # next_page_button = self.driver.find_element_by_css_selector("b.dxp-button.dxp-bi.dxp-disabledButton")
             self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
                                                     "img.dxWeb_pNext_Material")))
 
@@ -132,7 +104,7 @@ class Bot:
         self.get_trademarks()
 
     def write_csv(self, data):
-        with open('trademarks1.csv', 'a+', encoding='utf-8') as f:
+        with open(self.FILE_NAME, 'a+', encoding='utf-8') as f:
             writer = csv.writer(f)
 
             for data_row in data:
