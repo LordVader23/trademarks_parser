@@ -8,6 +8,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import StaleElementReferenceException
 from selenium.common.exceptions import ElementClickInterceptedException
+import csv
 
 
 class Bot:
@@ -30,11 +31,16 @@ class Bot:
 
         self.get_trademarks()
 
-    def wait_more(self):
-        sleep(10)
+    def wait_more(self, wait_obj, ec):
+        while True:
+            try:
+                wait_obj.until(ec)
+            except TimeoutException:
+                self.wait_more(wait_obj, ec)
+            else:
+                break
 
     def get_trademarks(self):
-        # Wait before element is clickable
         wait2 = WebDriverWait(self.driver, 15)
 
         # try:
@@ -43,14 +49,19 @@ class Bot:
         #         EC.presence_of_element_located((By.CSS_SELECTOR, 'td.dxflNestedControlCell_Material')))
         # except :
         #     self.get_trademarks()
-        while True:
-            try:
-                wait2.until(EC.element_to_be_clickable((By.CSS_SELECTOR,
+
+        # while True:
+        #     try:
+        #         wait2.until(EC.element_to_be_clickable((By.CSS_SELECTOR,
+        #                                             "td.dxflNestedControlCell_Material")))
+        #     except TimeoutException:
+        #         self.wait_more()
+        #     else:
+        #         break
+
+        # To wait
+        self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
                                                     "td.dxflNestedControlCell_Material")))
-            except TimeoutException:
-                self.wait_more()
-            else:
-                break
         # wait2.until(
         #     EC.staleness_of(self.driver.find_elements_by_css_selector("span[id='cvContracts_DXCardLayout0_0_Cap']")[0]))
 
@@ -85,7 +96,9 @@ class Bot:
         try:
             # sleep(9)
             # next_page_button = self.driver.find_element_by_css_selector("b.dxp-button.dxp-bi.dxp-disabledButton")
-            sleep(9)
+            self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
+                                                    "img.dxWeb_pNext_Material")))
+
             next_page_button = self.driver.find_element_by_css_selector("img.dxWeb_pNext_Material")
             next_page_button.click()
         except Exception:
@@ -96,7 +109,9 @@ class Bot:
     def write_csv(self, data):
         with open('trademarks1.csv', 'a+', encoding='utf-8') as f:
             writer = csv.writer(f)
-            writer.writerow(data)
+
+            for data_row in data:
+                writer.writerow(data_row)
 
 
 if __name__ == '__main__':
