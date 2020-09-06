@@ -60,25 +60,44 @@ class Bot:
         #         break
 
         # To wait
-        self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
-                                                    "td.dxflNestedControlCell_Material")))
+        sleep(10)
+        try:
+            self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
+                                                        "td.dxflNestedControlCell_Material")))
+        except StaleElementReferenceException:
+            self.wait_more(wait2, EC.staleness_of(self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")[0]))
         # wait2.until(
         #     EC.staleness_of(self.driver.find_elements_by_css_selector("span[id='cvContracts_DXCardLayout0_0_Cap']")[0]))
 
+        sleep(5)
         all_info = self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")
         info = []
+
+        sleep(10)
+        try:
+            self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
+                                                          "img.dxeImage_Material")))
+        except StaleElementReferenceException:
+            self.wait_more(wait2, EC.staleness_of(self.driver.find_elements_by_css_selector("img.dxeImage_Material")[-1]))
 
         images = self.driver.find_elements_by_css_selector("img.dxeImage_Material")
         img_links = []
 
         # Get img links
-        for img in images:
-            link = img.get_attribute('src')
-            img_links.append(link)
+        try:
+            for img in images:
+                link = img.get_attribute('src')
+                img_links.append(link)
+        except StaleElementReferenceException:
+            self.wait_more(wait2, EC.staleness_of(self.driver.find_elements_by_css_selector("img.dxeImage_Material")[-1]))
 
         # To extract elem text
-        for elem in all_info:
-            info.append(elem.text)
+        try:
+            for elem in all_info:
+                info.append(elem.text)
+        except StaleElementReferenceException:
+            self.wait_more(wait2,
+                           EC.staleness_of(self.driver.find_elements_by_css_selector("td.dxflNestedControlCell_Material")[-1]))
 
         data = []
 
