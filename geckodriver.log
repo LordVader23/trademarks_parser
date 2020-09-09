@@ -865,3 +865,31 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
 JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
 1599661971456	Marionette	INFO	Stopped listening on port 41229
+1599662870349	geckodriver	INFO	Listening on 127.0.0.1:59111
+1599662871359	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6Rzdm7"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599662876793	Marionette	INFO	Listening on port 34343
+1599662876892	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599663025353	Marionette	INFO	Stopped listening on port 34343
+1599663036279	geckodriver	INFO	Listening on 127.0.0.1:43389
+1599663036292	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3PAAMF"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599663040508	Marionette	INFO	Listening on port 39729
+1599663040540	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1599663071657	geckodriver	INFO	Listening on 127.0.0.1:56399
+1599663071668	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileGkhGeo"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599663075540	Marionette	INFO	Listening on port 44849
+1599663075585	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599663152992	Marionette	INFO	Stopped listening on port 44849
