@@ -615,3 +615,19 @@ Exiting due to channel error.
 [GFX1-]: Receive IPC close with reason=AbnormalShutdown
 Exiting due to channel error.
 Exiting due to channel error.
+1599651320286	geckodriver	INFO	Listening on 127.0.0.1:36267
+1599651321291	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileKjtoE5"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599651326591	Marionette	INFO	Listening on port 39753
+1599651326627	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599651341840	Marionette	INFO	Stopped listening on port 39753
+1599651629577	geckodriver	INFO	Listening on 127.0.0.1:60245
+1599651629583	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilejlqyPH"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599651634951	Marionette	INFO	Listening on port 34759
+1599651635053	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
