@@ -778,3 +778,90 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
 JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
 1599659339883	Marionette	INFO	Stopped listening on port 37389
+1599661083185	geckodriver	INFO	Listening on 127.0.0.1:58091
+1599661084194	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileRRot4h"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599661090439	Marionette	INFO	Listening on port 33549
+1599661090543	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599661135635	Marionette	INFO	Stopped listening on port 33549
+1599661139763	geckodriver	INFO	Listening on 127.0.0.1:53913
+1599661139771	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilew0eeVj"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599661144558	Marionette	INFO	Listening on port 33649
+1599661144601	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599661207847	Marionette	INFO	Stopped listening on port 33649
+1599661222659	geckodriver	INFO	Listening on 127.0.0.1:34201
+1599661222669	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileTVqvJd"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599661227119	Marionette	INFO	Listening on port 37397
+1599661227206	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599661265295	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1599661458147	Marionette	INFO	Stopped listening on port 37397
+1599661484252	geckodriver	INFO	Listening on 127.0.0.1:49091
+1599661484262	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileOYvolC"
+1599661491344	geckodriver	INFO	Listening on 127.0.0.1:49205
+1599661491353	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6fFRcQ"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599661496672	Marionette	INFO	Listening on port 33597
+1599661496719	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599661579821	geckodriver	INFO	Listening on 127.0.0.1:49431
+1599661579832	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDlIibc"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599661584052	Marionette	INFO	Listening on port 32897
+1599661584151	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599661634326	geckodriver	INFO	Listening on 127.0.0.1:40447
+1599661634341	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileSdloqF"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599661638063	Marionette	INFO	Listening on port 34641
+1599661638163	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599661681584	Marionette	INFO	Stopped listening on port 34641
+1599661689383	geckodriver	INFO	Listening on 127.0.0.1:53185
+1599661689393	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileGyN7XL"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599661693360	Marionette	INFO	Listening on port 36187
+1599661693413	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1599661797594	geckodriver	INFO	Listening on 127.0.0.1:38563
+1599661797606	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilevOwl12"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599661801616	Marionette	INFO	Listening on port 38417
+1599661801639	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599661877517	Marionette	INFO	Stopped listening on port 38417
+1599661893904	geckodriver	INFO	Listening on 127.0.0.1:55221
+1599661893912	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilenhytYR"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599661898112	Marionette	INFO	Listening on port 41229
+1599661898142	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599661971456	Marionette	INFO	Stopped listening on port 41229
