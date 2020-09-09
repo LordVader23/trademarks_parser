@@ -85,13 +85,11 @@ class Bot2(Bot):
 
             data.append(data_row)
 
-        for i in data:
-            print(i)
         self.write_csv(data)
         # To paginate
         try:
-            self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
-                                                              "a[aria-label='next page']")[0]))
+            # self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
+            #                                                   "a[aria-label='next page']")[0]))
 
             next_page_button = self.driver.find_elements_by_css_selector("a[aria-label='next page']")
             next_page_button[0].click()
