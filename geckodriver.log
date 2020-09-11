@@ -1034,3 +1034,125 @@ console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Err
 1599686410876	Marionette	INFO	Listening on port 37897
 1599686410923	Marionette	WARN	TLS certificate errors will be ignored for this session
 1599686517343	Marionette	INFO	Stopped listening on port 37897
+1599852450370	geckodriver	INFO	Listening on 127.0.0.1:58243
+1599852451367	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileP9ZxHP"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599852461724	Marionette	INFO	Listening on port 37135
+1599852461909	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599852514337	Marionette	INFO	Stopped listening on port 37135
+1599852525099	geckodriver	INFO	Listening on 127.0.0.1:36051
+1599852525118	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilesj18Se"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599852530040	Marionette	INFO	Listening on port 38783
+1599852530064	Marionette	WARN	TLS certificate errors will be ignored for this session
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599852593379	geckodriver	INFO	Listening on 127.0.0.1:45589
+1599852593390	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileufZfu4"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599852597884	Marionette	INFO	Listening on port 34085
+1599852597933	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599852599309	Marionette	INFO	Stopped listening on port 34085
+1599852629303	geckodriver	INFO	Listening on 127.0.0.1:42089
+1599852630310	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileq6JoKl"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599852634166	Marionette	INFO	Listening on port 39319
+1599852634265	Marionette	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1599852708835	geckodriver	INFO	Listening on 127.0.0.1:38531
+1599852708842	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile9fZm71"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599852713004	Marionette	INFO	Listening on port 38869
+1599852713064	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599852752286	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1599852789189	Marionette	INFO	Stopped listening on port 38869
+1599857937217	geckodriver	INFO	Listening on 127.0.0.1:52795
+1599857938350	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJaoIqS"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599857951554	Marionette	INFO	Listening on port 45813
+1599857951632	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599857966770	Marionette	INFO	Stopped listening on port 45813
+1599858060069	geckodriver	INFO	Listening on 127.0.0.1:36027
+1599858060077	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileqnq98H"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599858064864	Marionette	INFO	Listening on port 44915
+1599858064910	Marionette	WARN	TLS certificate errors will be ignored for this session
+1599858417752	Marionette	INFO	Stopped listening on port 44915
+1599858747457	geckodriver	INFO	Listening on 127.0.0.1:57763
+1599858748464	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileQv2vQW"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599858752676	Marionette	INFO	Listening on port 44879
+1599858752694	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599858785157	Marionette	INFO	Stopped listening on port 44879
+1599858803148	geckodriver	INFO	Listening on 127.0.0.1:46503
+1599858804151	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilelUAi9N"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599858807938	Marionette	INFO	Listening on port 38371
+1599858807973	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599858885522	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1599858895428	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1599858905845	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1599858916027	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1599858926489	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1599858932936	Marionette	INFO	Stopped listening on port 38371
+1599859137199	geckodriver	INFO	Listening on 127.0.0.1:50893
+1599859137206	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilezvwJPY"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599859141094	Marionette	INFO	Listening on port 34309
+1599859141126	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599859193708	Marionette	INFO	Stopped listening on port 34309
+1599859250499	geckodriver	INFO	Listening on 127.0.0.1:37869
+1599859250505	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile4SB5j4"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599859254251	Marionette	INFO	Listening on port 38791
+1599859254327	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599859527212	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:245:13
+TimedPromise@chrome://marionette/content/sync.js:230:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:416:10
+webdriverClickElement@chrome://marionette/content/interaction.js:182:31
+1599859568845	Marionette	INFO	Stopped listening on port 38791
+1599859571323	geckodriver	INFO	Listening on 127.0.0.1:41969
+1599859572328	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileRh49U2"
+console.error: SearchCache: "_readCacheFile: Error reading cache file:" (new Error("", "(unknown module)"))
+1599859576148	Marionette	INFO	Listening on port 36691
+1599859576165	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 271: NS_ERROR_FAILURE: Should pass a non-null uri
+JavaScript warning: https://www3.wipo.int/branddb/scripts/branddb-required.10795.min.js, line 722: unreachable code after return statement
+1599859984598	Marionette	INFO	Stopped listening on port 36691
