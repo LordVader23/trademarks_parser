@@ -11,6 +11,7 @@ from selenium.common.exceptions import StaleElementReferenceException
 from selenium.common.exceptions import ElementClickInterceptedException
 import csv
 import datetime
+import re
 
 
 class Bot2(Bot):
@@ -70,14 +71,12 @@ class Bot2(Bot):
 
         self.write_csv(data)
         # To paginate
-        next_page_button = self.driver.find_element_by_css_selector(
-            "button.mat-paginator-navigation-next.mat-icon-button")
-        try:
-            next_page_button.get_attribute('disabled')
-        except Exception:
-            self.get_trademarks()
-        else:
+        if self.check_if_last_page():
             return None
+        else:
+            next_page_button = self.driver.find_elements_by_css_selector("svg.mat-paginator-icon")
+            next_page_button[1].click()
+            self.get_trademarks()
 
     def wait_loader(self):
         while True:
@@ -87,6 +86,19 @@ class Bot2(Bot):
                 loader = self.driver.find_element_by_css_selector("div.cube-loader.ng-star-inserted")
             except NoSuchElementException:
                 break
+
+    def check_if_last_page(self):
+        """
+        Checks if page is last
+        :return: True or False
+        """
+        page_number = self.driver.find_element_by_css_selector("div.mat-paginator-range-label").text
+        match = re.search(r'([0-9]+) of ([0-9]+)', page_number)
+
+        if match[1] == match[2]:
+            return True
+        else:
+            return False
 
 
 if __name__ == '__main__':
