@@ -49,6 +49,7 @@ class Bot3(Bot):
 
     def get_trademarks(self):
         self.wait_loader()  # To wait until page is loaded
+        sleep(3)
 
         brands = self.driver.find_elements_by_css_selector("td[aria-describedby='gridForsearch_pane_BRAND']")
         sources = self.driver.find_elements_by_css_selector("td[aria-describedby='gridForsearch_pane_SOURCE']")
@@ -91,7 +92,8 @@ class Bot3(Bot):
             # self.wait_more(wait2, EC.element_to_be_clickable((By.CSS_SELECTOR,
             #                                                   "a[aria-label='next page']")[0]))
 
-            next_page_button = self.driver.find_elements_by_css_selector("a[aria-label='next page']")
+            next_page_button = self.driver.find_elements_by_css_selector(
+            "a.toolTip.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only span.ui-button-icon-primary.ui-icon.ui-icon-triangle-1-e")
             next_page_button[0].click()
         except Exception:
             return None
