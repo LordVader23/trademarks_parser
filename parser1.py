@@ -71,6 +71,9 @@ class Bot:
         images = self.driver.find_elements_by_css_selector("img.dxeImage_Material")
         img_links = []
 
+        page_urls = [i.get_attribute('href') for i in
+                     self.driver.find_elements_by_css_selector("a.btn.btn-circle.btn-success.fa.fa-file-text.btn-view")]
+
         # Get img links
         for img in images:
             link = img.get_attribute('src')
@@ -85,10 +88,12 @@ class Bot:
         while info:
             a1 = info[0:9]
             a1.append(img_links[0])
+            a1.append(page_urls[0])
             data.append(a1)
 
             del info[0:9]
             del img_links[0]
+            del page_urls[0]
 
         self.write_csv(data)
         # To paginate
